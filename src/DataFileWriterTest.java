@@ -12,5 +12,7 @@ class DataFileWriterTest {
 
     @org.junit.jupiter.api.Test
     void fileCreator() {
+        DataFileWriter test1 = new DataFileWriter("test", 10);
+        test1.fileCreator();
     }
 }

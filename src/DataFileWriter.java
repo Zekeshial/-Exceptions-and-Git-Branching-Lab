@@ -9,11 +9,19 @@ public class DataFileWriter {
     private String fileName;
     private int fileColumnLength;
 
+    /**
+     * Constructor for the DataFileWriter
+     * @param fileName Name of the file you wish to create
+     * @param fileColumnLength how many Columns/rows you wish to have the data be
+     */
     public DataFileWriter(String fileName, int fileColumnLength) {
         this.fileName = fileName;
         this.fileColumnLength = fileColumnLength;
     }
 
+    /**
+     * Default constructor will create a file name of default and 0 rows/columns.
+     */
     public DataFileWriter(){
         this.fileName = "default";
         this.fileColumnLength = 0;
@@ -35,6 +43,10 @@ public class DataFileWriter {
         this.fileColumnLength = fileColumnLength;
     }
 
+    /**
+     * Creates a String of 4 integers and 2 floats
+     * @return a String of 4 integers and 2 floats
+     */
     public String informationOnEachLine(){
         Random random = new Random();
 
@@ -51,7 +63,9 @@ public class DataFileWriter {
 
     }
 
-
+    /**
+     * Creates the information for the file
+     */
     public void fileCreator() {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
             for (int i = 0; i < fileColumnLength; i++) {
