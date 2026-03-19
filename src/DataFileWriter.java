@@ -45,7 +45,7 @@ public class DataFileWriter {
         float float1 = random.nextFloat(1000.4f);
         float float2 = random.nextFloat(1000.4f);
 
-        String res = "First four ints: " + int1 + " " + int2 + " " + int3 + " " + int4 + " Two Floats: " + float1 + " " + float2;
+        String res = int1 + " " + int2 + " " + int3 + " " + int4 + " " + float1 + " " + float2;
 
         return res;
 
@@ -61,6 +61,9 @@ public class DataFileWriter {
             System.out.println("File written Successfully");
         } catch (FileNotFoundException fNotFound) {
         System.out.println("The file you tried to open could not be opened." + fNotFound.getMessage());
+        } catch (StackOverflowError e){
+            System.err.println("A Stack Over flow error has occurred. Maybe try to not make the file Column Length so Long to fix the problem.");
+            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
