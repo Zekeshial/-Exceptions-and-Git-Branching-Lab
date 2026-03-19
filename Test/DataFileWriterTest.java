@@ -1,5 +1,3 @@
-import static org.junit.jupiter.api.Assertions.*;
-
 class DataFileWriterTest {
 
     @org.junit.jupiter.api.Test
@@ -12,7 +10,7 @@ class DataFileWriterTest {
 
     @org.junit.jupiter.api.Test
     void fileCreator() {
-        DataFileWriter test1 = new DataFileWriter("test", 10);
+        DataFileWriter test1 = new DataFileWriter("test2", 10);
         test1.fileCreator();
     }
 }
