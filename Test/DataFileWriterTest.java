@@ -12,5 +12,6 @@ class DataFileWriterTest {
     void fileCreator() {
         DataFileWriter test1 = new DataFileWriter("test2", 10);
         test1.fileCreator();
+
     }
 }
