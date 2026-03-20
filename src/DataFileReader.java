@@ -15,6 +15,10 @@ public class DataFileReader {
         this.fileName = fileName;
     }
 
+    /**
+     * Constructor for Datafile Reader
+     * @param fileName Name of the file you wish to read
+     */
     public DataFileReader(String fileName) {
         this.fileName = fileName;
     }
@@ -23,6 +27,9 @@ public class DataFileReader {
         this.fileName = "default";
     }
 
+    /**
+     * Reads the data for a file that you specified in the constructor. If non specified it will read a file called default.
+     */
     public void dataReader() {
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             String line;
